@@ -2,8 +2,8 @@
   function test(x, y = 'world'){
     console.log('默认值',x,y);
   }
-  test('hello');
-  test('hello','kill');
+  test('hello');//默认值 hello world
+  test('hello','kill');//默认值 hello kill
 }
 
 {
@@ -11,7 +11,7 @@
   function test2(x,y=x){
     console.log('作用域',x,y);
   }
-  test2('kill');
+  test2('kill');//作用域 kill kill
 }
 
 {
@@ -24,24 +24,24 @@
 }
 
 {
-  console.log(...[1,2,4]);
-  console.log('a',...[1,2,4]);
+  console.log(...[1,2,4]); //1 2 4
+  console.log('a',...[1,2,4]); //a 1 2 4
 }
 
 {
   let arrow = v => v*2;
   let arrow2 = () => 5;
-  console.log('arrow',arrow(3));
-  console.log(arrow2());
+  console.log('arrow',arrow(3)); //arrow 6
+  console.log(arrow2()); // 5
 
 }
 
 {
   function tail(x){
-    console.log('tail',x);
+    console.log('tail',x);   //tail 123
   }
   function fx(x){
     return tail(x)
   }
-  fx(123)
+  fx(123)  
 }

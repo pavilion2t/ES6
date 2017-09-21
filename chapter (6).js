@@ -1,16 +1,16 @@
 {
   let arr = Array.of(3,4,7,9,11);
-  console.log('arr=',arr);
+  console.log('arr=',arr);  //arr = [3, 4, 7, 9, 11]
 
   let empty=Array.of();
-  console.log('empty',empty);
+  console.log('empty',empty);// arr = []
 }
 
 {
   let p=document.querySelectorAll('p');
   let pArr=Array.from(p);
   pArr.forEach(function(item){
-    console.log(item.textContent);
+    console.log(item.textContent);  //
   });
 
   console.log(Array.from([1,3,5],function(item){return item*2}));
